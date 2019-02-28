@@ -13,21 +13,16 @@ var updateProfile = function () {
   var email = emailInput.value
   var phone = phoneInput.value
 
-  preParagraph.innerHTML =
-    '<h1>Hi, my name is ' + firstname + ' ' + lastname + '!</h1>' +
-    '<p>' + description + '</p>' +
-    '<p>If you\'re interested in a date, you can email me at ' +
-      '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
-      ' or give me a call at ' +
-      '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.</p>'
+  var profile = '<h1>Hi, my name is ' + firstname + ' ' + lastname + '!</h1>' +
+  '<p>' + description + '</p>' +
+  '<p>If you\'re interested in a date, you can email me at ' +
+    '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
+    ' or give me a call at ' +
+    '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.</p>'
 
-  rawParagraph.textContent =
-    '<h1>Hi, my name is ' + firstname + ' ' + lastname + '!</h1>' +
-    '<p>' + description + '</p>' +
-    '<p>If you\'re interested in a date, you can email me at ' +
-      '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
-      ' or give me a call at ' +
-      '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.</p>'
+  preParagraph.innerHTML = profile
+
+  rawParagraph.textContent = profile
 }
 
 firstName.addEventListener('input', updateProfile)
